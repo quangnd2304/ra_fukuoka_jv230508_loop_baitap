@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 12</title>
+</head>
+
+<body>
+    <script>
+        /*
+            input:number =  abc...m: 123456
+            output: m...cba
+            - Giải pháp: tách từng chữ số: m, ..., c,b,a
+                + vòng 1: 6 ->reveredNumber = '6'
+                + vòng 2: 5 ->reveredNumber = '65'
+                + vòng 3: 4
+                + vòng 4: 3
+                + vòng 5: 2
+                + vòng 6: 1 -> reveredNumber = '654321'
+            -> sử dụng vòng lặp while(number>0)
+            -> Mỗi vòng tính: 123456
+                + number%10-> tách chữ số cuối -> 6
+                + number = Math.floor(number/10) -> 12345
+        */
+        // Bước 1: Nhập vào số number
+        // Bước 2: Sử dụng vòng while với điều kiện number>0
+        // Bước 3: Tính toán: lặp cho đến khi nào number = 0
+                // 3.1. lấy ra số hàng đơn vị -> number%10
+                // 3.2. Tính lại giá trị number -> number = Math.floor(number/10)
+                // 3.3. In ra chữ số hàng đơn vị -> document.write(đơn vị)
+    </script>
+</body>
+
+</html>

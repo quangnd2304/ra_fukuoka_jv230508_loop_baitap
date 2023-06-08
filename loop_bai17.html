@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 17</title>
+</head>
+
+<body>
+    <script>
+        // Nhập vào 3 số từ bàn phím, sắp xếp theo thứ tự giảm dần và in ra
+        // sắp xếp giảm dần
+        //number1, number2, number3
+        // Bước 1: nhập vào 3 số
+        let number1 = Number(prompt("Nhập vào số thứ nhất"));
+        let number2 = Number(prompt("Nhập vào số thứ hai"));
+        let number3 = Number(prompt("Nhập vào số thứ ba"));
+        // Bước 2: max, number, min
+        let max = number1;
+        let min = number1;
+        if (max < number2) {
+            max = number2;
+        }
+        if (max < number3) {
+            max = number3;
+        }
+        if (min > number2) {
+            min = number2;
+        }
+        if (min > number3) {
+            min = number3;
+        }
+        // In ra kết quả max, number, min
+        console.log("Kết quả sau khi sắp xếp");
+        console.log(max);
+        if (max != number1 && min != number1) {
+            console.log(number1);
+        }
+        if (max != number2 && min != number2) {
+            console.log(number2);
+        }
+        if (max != number3 && max != number3) {
+            console.log(number3);
+        }
+        console.log(min);
+    </script>
+</body>
+
+</html>

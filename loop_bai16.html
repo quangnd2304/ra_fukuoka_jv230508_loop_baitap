@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 16</title>
+</head>
+
+<body>
+    <script>
+        // Nhập vào 3 số, in ra dấu (+) hoặc (-) của tích 3 số
+        // Bước 1: Nhập vào 3 số number1, number2, number3
+        let number1 = Number(prompt("Nhập vào số thứ nhất"));
+        let number2 = Number(prompt("Nhập vào số thứ hai"));
+        let number3 = Number(prompt("Nhập vào số thứ ba"));
+        // Bước 2: Tính tích của 3 số result
+        let result = number1 * number2 * number3;
+        // Bước 3: result < 0 -> (-), result > 0 -> (+), result=0 -> 0
+        if (result < 0) {
+            console.log("Dấu của tích 3 số là -");
+        } else if (result > 0) {
+            console.log("Dấu của tích 3 số là +");
+        } else {
+            console.log("Tích 3 số là 0");
+        }
+    </script>
+</body>
+
+</html>

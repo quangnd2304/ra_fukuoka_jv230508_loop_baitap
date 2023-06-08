@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 21</title>
+</head>
+
+<body>
+    <script>
+        /*
+            Tàu con thoi Rikkei Academy:
+                input: 
+                - 5000 <= nhiên liệu <=30000
+                - 1 <= phi hành gia <=7
+                process:
+                - độ cao = 50km -> 100 * phi hành gia
+                output:
+                - độ cao tối đa
+                - số nhiên liệu còn lại                     
+        */
+        /*
+            Vòng lặp:
+                - for: khi biết trước số lần lặp
+                - while: khi chưa biêt trước số lần lặp (có thể không chạy vòng nào)
+                - do...while: khi chưa biết trước số lần lặp (ít nhất lặp 1 lần)
+        */
+        // Bước 1: Nhập vào nhiên liệu và phi hành gia
+        //-> validate nhiên liệu: number (5000->30000)
+        //-> validate phi hành gia: number (1->7)
+        let resource;
+        do {
+            resource = Number(prompt("Nhập vào số nhiên liệu"));
+            if (isNaN(resource)) {
+                alert("Vui lòng nhập số nhiên liệu là một số");
+            } else {
+                if (resource < 5000 || resource > 30000) {
+                    alert("Vui lòng nhập số nhiên liệu có giá trị trong khoảng 5000-30000");
+                } else {
+                    break;
+                }
+            }
+        } while (true);
+        let pilot;
+        do {
+            pilot = Number(prompt("Nhập vào số phi hành gia"));
+            if (isNaN(pilot)) {
+                alert("Vui lòng nhập số phi hành gia là một số");
+            } else {
+                if (pilot < 1 || pilot > 7) {
+                    alert("Vui lòng nhập giá trị phi hành gia trong khoảng 1-7");
+                } else {
+                    break;
+                }
+            }
+        } while (true);
+        // Bước 2: Tính độ cao tối đa và nhiên liệu còn lại
+        // Bước 2.1: 1 lần tăng độ cao 50km thì cần bao nhiêu nhiên liệu?
+        let resource50km = 100 * pilot;
+        // Bước 2.2: Tàu con thoi tăng độ cao được bao nhiêu lần
+        let times = Math.floor(resource / resource50km);
+        // Bước 2.3: Tính độ cao tối đa
+        let maxHeight = times * 50;
+        // Bước 2.4: Tính số nhiên liệu còn lại
+        let resourceRemain = resource % resource50km;
+        // Bước 3: In ra độ cao tối đa và nhiên liệu còn lại
+        alert("Độ cao tối đa: " + maxHeight + " - Số nhiên liệu còn lại: " + resourceRemain);
+    </script>
+</body>
+
+</html>
